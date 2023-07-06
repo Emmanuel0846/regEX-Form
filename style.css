@@ -52,7 +52,7 @@ fieldset {
   border: none;
   padding: 2rem 0;
   background-color: rgba(27, 27, 50, 0.8);
-  width: 55%;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -130,6 +130,10 @@ input, textarea {
   fieldset {
     width: 90%;
   }
+
+  h1 {
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (max-width:650px) {
@@ -138,3 +142,16 @@ input, textarea {
     font-size: 1.8rem;
   }
 }
+
+@media only screen and (max-width:435px) {
+  /* For tablets: */
+  fieldset {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+  
+}
+
