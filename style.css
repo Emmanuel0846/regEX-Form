@@ -150,12 +150,15 @@ input, textarea {
 @media only screen and (max-width:435px) {
   /* For tablets: */
   fieldset {
-    width: 95%;
+    width: 100%;
   }
 
   h1 {
     font-size: 1.1rem;
   }
   
+  label {
+    font-size: 15px;
+  }
 }
 
