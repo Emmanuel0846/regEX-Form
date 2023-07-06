@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Engineering Course Application</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function validateForm() {
+      // Get form values
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var phoneNumber = document.getElementById("phoneNumber").value;
+      var email = document.getElementById("email").value;
+      var reason = document.getElementById("reason").value;
+
+      // Regular expressions for validation
+      var nameRegex = /^[a-zA-Z]+$/;
+      var phoneRegex = /^\d{1,11}$/;
+      var emailRegex = /^[a-zA-Z0-9._]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$/;
+
+      // Check first name
+      if (!nameRegex.test(firstName)) {
+        alert("Please enter a valid first name (only alphabets, no digits or whitespaces).");
+        return false;
+      }
+
+      // Check last name
+      if (!nameRegex.test(lastName)) {
+        alert("Please enter a valid last name (only alphabets, no digits or whitespaces).");
+        return false;
+      }
+
+      // Check phone number
+      if (!phoneRegex.test(phoneNumber)) {
+        alert("Please enter a valid phone number (only numbers, up to 11 digits).");
+        return false;
+      }
+
+      // Check email address
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address (e.g., name@example.com).");
+        return false;
+      }
+
+      // Check reason for applying
+      if (reason.length > 300) {
+        alert("Please enter a reason within 300 characters.");
+        return false;
+      }
+
+      // Form is valid, proceed with submission
+      return true;
+    }
+
+    function clearForm() {
+      document.getElementById("firstName").value = "";
+      document.getElementById("lastName").value = "";
+      document.getElementById("phoneNumber").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("reason").value = "";
+    }
+  </script>
+</head>
+<body>
+  <header class="header">
+    <h1><span class="company">IVYARC &#160;</span>Software Engineering Course Application</h1>
+  </header>
+  <fieldset>
+    <form onsubmit="validateForm()">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" required><br><br>
+  
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" required><br><br>
+  
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="text" id="phoneNumber" required><br><br>
+  
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" required><br><br>
+  
+      <label for="reason">Reason for Applying:</label>
+      <textarea id="reason" rows="4" cols="50" maxlength="300" required></textarea><br><br>
+  
+      <input type="submit" value="Submit" class="submit">
+      <input type="button" value="Cancel" class="cancel" onclick="clearForm()">
+    </form>
+  </fieldset>
+</body>
+</html>
