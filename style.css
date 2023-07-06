@@ -141,6 +141,10 @@ input, textarea {
   h1 {
     font-size: 1.8rem;
   }
+
+  label {
+    font-size: 15px;
+  }
 }
 
 @media only screen and (max-width:435px) {
