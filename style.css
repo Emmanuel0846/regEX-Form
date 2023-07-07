@@ -64,12 +64,21 @@ label {
   padding-top: 0;
 }
 
-input, textarea {
+input {
   margin-top: 0;
   margin-bottom: 20px;
   width: 100%;
   border-radius: 15px;
   min-height: 3em;
+  transition: 2s;
+} 
+
+textarea {
+  margin-top: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 15px;
+  min-height: 9em;
   transition: 2s;
 } 
 
@@ -140,10 +149,6 @@ input, textarea {
   /* For mobile phones: */
   h1 {
     font-size: 1.8rem;
-  }
-
-  label {
-    font-size: 15px;
   }
 }
 
